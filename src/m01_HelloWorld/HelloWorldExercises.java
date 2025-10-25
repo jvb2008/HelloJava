@@ -1,4 +1,4 @@
-package c00_HelloWorld;
+package m01_HelloWorld;
 
 /*
 Module1--HelloWorld
