@@ -1,105 +1,105 @@
+package m06_Loops;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-public class m06_Loops {
+public class Loops {
     static void main() {
+        // Loops
 
+        // - for controlado por contador
 
-        for (int i = 1; i <= 5; i++) {
-            if (i == 3) continue;
-            System.out.println(i);
+        for (int index = 0; index < 5; index++) {
+            System.out.println("Hola, Java!");
         }
 
-        for (int i = 1; i <= 5; i++) {
-            if (i == 3) break;
-            System.out.println(i);
+        String[] names = {"Josu", "Motoso", "jmotoso001@gmail.com"};
+
+        for (int index = 0; index < names.length; index++) {
+            System.out.println(names[index]);
         }
 
-        //loops
+        // - for-each
 
-        for (int i = 5; i > 0; i--) {
-            System.out.println("Hola");
-        }
-
-        String[] frutas = {"a", "b", "c"};
-        for (int i = 0; i < frutas.length; i++) {
-            System.out.println(frutas[i]);
-
-        }
-        // for-each
-        for (String fruta : frutas) {
-            System.out.println(fruta);
-        }
-
-
-        HashSet<String> names = new HashSet<>();
-        names.add("Josu");
-        names.add("Motoso");
-        names.add("Programador");
-        names.add("jmotoso001@gmail.com");
         for (String name : names) {
             System.out.println(name);
         }
 
-        HashMap<Integer, String> names2 = new HashMap<>();
-        names2.put(1, "Josu");
-        names2.put(2, "Juan");
-        names2.put(3, "Maite");
-        names2.put(4, "Julio");
-        names2.put(5, "Martin");
+        HashSet<Integer> numbers = new HashSet<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
 
-        for (Map.Entry<Integer, String> a : names2.entrySet()) {
-            System.out.println(a.getKey());
-            System.out.println(a.getValue());
-
+        for (Integer number : numbers) {
+            System.out.println(number);
         }
 
-        int i = 0;
-        while (i < frutas.length) {
-            System.out.println(frutas[i]);
-            i++;
+        HashMap<String, String> emails = new HashMap<>();
+        emails.put("Josu", "jmotoso001@gmail.com");
+        emails.put("Maite", "maite@gmail.com");
+        emails.put("Juan", "juan@gmail.com");
+
+        for (Map.Entry<String, String> email : emails.entrySet()) {
+            System.out.println(email.getKey());
+            System.out.println(email.getValue());
         }
 
-        i = 0;
-        do {
-            System.out.println(frutas[i]);
-            i++;
-        } while (i < 0);
 
-        i = 0;
+        // - while
+
+        int index = 0;
+        while (index < 5) {
+            System.out.println("Hola, Java!");
+            index++;
+        }
+
+        index = 0;
+        while (index < names.length) {
+            System.out.println(names[index]);
+            index++;
+        }
+
+        index = 0;
         boolean find = false;
-        while (!(find)) {
-            if (frutas[i].equals("a")) {
+        while (!find) {
+            System.out.println(names[index]);
+            if (names[index].equals("Josu")) {
                 find = true;
-                System.out.println(frutas[i]);
             }
-            i++;
+            index++;
         }
 
-        //control de bucles
-        //break
-        i = 0;
-        while (true) {
-            if (frutas[i].equals("a")) {
-                System.out.println(frutas[i]);
+        // - do-while
+
+        index = 0;
+        do {
+            System.out.println("Hola, Java!");
+            index++;
+        } while (index < 0);
+
+
+        // Control de bucles
+
+        // - break
+
+        for (String name : names) {
+            if (name.equals("Josu")) {
                 break;
             }
-            i++;
+            System.out.println(name);
         }
 
-        for (int ind = 0; ind < 5; ind++) {
-            if (ind == 3) {
+        // - continue
+
+        for (int i = 0; i < 5; i++) {
+            if (i == 3) {
                 continue;
             }
-            System.out.println(ind);
-        }
-
-        for (int i = 1; i <= 5; i++) {
-            if (i == 3) break;
             System.out.println(i);
         }
-
     }
 
 }

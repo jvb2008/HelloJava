@@ -1,4 +1,4 @@
-package m04_ControlStructures;
+package m04_Conditionals;
 
 public class Conditionals {
 

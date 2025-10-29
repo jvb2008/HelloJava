@@ -3,12 +3,7 @@ package m02_Fundamentals;
 public class Operators {
     public static void main(String[] args) {
 
-        /*
-        Módulo2 Operadores aritméticos
-        */
-
         // Aritméticos
-
         var a = 5;
         var b = 3;
 
@@ -18,12 +13,7 @@ public class Operators {
         System.out.println(a / b);
         System.out.println(a % b);
 
-        /*
-        Módulo3 - Operadores de asignación
-        */
-
         // Asignación
-
         a = b;
         System.out.println(a);
 
@@ -42,12 +32,7 @@ public class Operators {
         a %= 2;
         System.out.println(a);
 
-        /*
-        Operadores de comparación
-        */
-
         // Comparación (Relacionales)
-
         System.out.println(a == b);
         System.out.println(a == 0);
 
@@ -57,12 +42,7 @@ public class Operators {
         System.out.println(a < b);
         System.out.println(a <= b);
 
-        /*
-        Módulo2 - Operadores lógicos
-        */
-
         // Lógicos
-
         // Y (AND)
         System.out.println(true && true);
         System.out.println(true && false);
@@ -84,10 +64,6 @@ public class Operators {
         System.out.println(!false);
 
         System.out.println(!(3 > 2) || 5 == 2);
-
-        /*
-        Módulo2 - Operadores unarios
-        */
 
         // Unarios
         System.out.println(+b);
