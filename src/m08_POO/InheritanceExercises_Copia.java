@@ -1,27 +1,63 @@
 package m08_POO;
 
-public class InheritanceExercises {
+public class InheritanceExercises_Copia {
     static void main() {
 
         // 1. Crea una clase Vehicle con un método move(). Luego crea una subclase Car que herede de Vehicle y agrega el método honk() (Bocinazo).
+        Car car = new Car("red", 3);
+        car.move();
+        car.honk();
 
-        // 2. Define una clase Person con los atributos name y age. Luego crea una clase Student que agregue el atributo grade y un método study().
+        Animal cat = new Cat();
+        Animal dog = new Dog();
 
-        // 3. Crea una clase Animal con el método makeSound(). Haz que Dog diga “Woof” y Cat diga “Meow” sobrescribiendo ese método.
+        cat.makeSound();
+        dog.makeSound();
 
-        // 4. La clase Employee tiene los atributos name y salary. Manager hereda de Employee y agrega el atributo department.
 
-        // 5. Crea una clase abstracta Shape con un método calculateArea(). Luego implementa ese método en Circle y Rectangle.
+    }
 
-        // 6. Crea una clase Bird con el método fly(). Luego crea Eagle que sobrescriba fly() pero también llame al método original con super.fly().
+    public static class Vehicle {
+        String color;
+        int numDoors;
 
-        // 7. Haz una clase Device con un constructor que imprima “Device created”. Luego crea Phone que herede de Device y en su constructor imprima “Phone ready”.
+        public Vehicle(String color, int numDoors) {
+            this.color = color;
+            this.numDoors = numDoors;
+        }
 
-        // 8. Account tiene un saldo y métodos para deposit() y withdraw(). SavingsAccount hereda y agrega un método addInterest().
+        void move() {
+            System.out.println("El coche se mueve");
+        }
+    }
 
-        // 9. Crea una clase Vehicle y tres subclases: Car, Bike y Truck, cada una con un método describe() sobrescrito.
+    public static class Car extends Vehicle {
+        public Car(String color, int numDoors) {
+            super(color, numDoors);
+        }
 
-        // 10. Crea un ArrayList<Animal> que contenga instancias de Dog, Cat y Bird. Recorre la lista y llama a makeSound().
+        void honk() {
+            System.out.println("El coche pita con la bocina");
+        }
+    }
 
+    public static class Animal {
+        void makeSound() {
+            System.out.println("Sonido genérico");
+        }
+    }
+
+    public static class Dog extends Animal {
+        @Override
+        void makeSound() {
+            System.out.println("Guau");
+        }
+    }
+
+    public static class Cat extends Animal {
+        @Override
+        void makeSound() {
+            System.out.println("Miau");
+        }
     }
 }
